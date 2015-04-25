@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150425011321) do
 
-  create_table "emergencies", force: :cascade do |t|
+  create_table "emergencies", id: false, force: :cascade do |t|
     t.string   "code"
     t.integer  "fire_severity"
     t.integer  "police_severity"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150425011321) do
 
   add_index "emergencies", ["code"], name: "index_emergencies_on_code"
 
-  create_table "responders", force: :cascade do |t|
+  create_table "responders", id: false, force: :cascade do |t|
     t.string   "emergency_code"
     t.string   "responder_type"
     t.string   "name"
