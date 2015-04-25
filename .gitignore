@@ -45,3 +45,7 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+# Ignore IDE files
+.idea/*
+*.iml
