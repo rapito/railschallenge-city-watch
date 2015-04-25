@@ -3,14 +3,14 @@
 
 one:
   emergency_code: MyString
-  type: 
+  responder_type: MyString
   name: MyString
   capacity: 1
   on_duty: false
 
 two:
   emergency_code: MyString
-  type: 
+  responder_type: MyString
   name: MyString
   capacity: 1
   on_duty: false

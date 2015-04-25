@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Emergency code</th>
-      <th>Type</th>
+      <th>Responder type</th>
       <th>Name</th>
       <th>Capacity</th>
       <th>On duty</th>
@@ -18,7 +18,7 @@
     <% @responders.each do |responder| %>
       <tr>
         <td><%= responder.emergency_code %></td>
-        <td><%= responder.type %></td>
+        <td><%= responder.responder_type %></td>
         <td><%= responder.name %></td>
         <td><%= responder.capacity %></td>
         <td><%= responder.on_duty %></td>

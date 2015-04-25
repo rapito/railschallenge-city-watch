@@ -19,7 +19,7 @@ class RespondersControllerTest < ActionController::TestCase
 
   def test_create
     assert_difference('Responder.count') do
-      post :create, responder: { capacity: responder.capacity, emergency_code: responder.emergency_code, name: responder.name, on_duty: responder.on_duty, type: responder.type }
+      post :create, responder: { capacity: responder.capacity, emergency_code: responder.emergency_code, name: responder.name, on_duty: responder.on_duty, responder_type: responder.responder_type }
     end
 
     assert_redirected_to responder_path(assigns(:responder))
@@ -36,7 +36,7 @@ class RespondersControllerTest < ActionController::TestCase
   end
 
   def test_update
-    put :update, id: responder, responder: { capacity: responder.capacity, emergency_code: responder.emergency_code, name: responder.name, on_duty: responder.on_duty, type: responder.type }
+    put :update, id: responder, responder: { capacity: responder.capacity, emergency_code: responder.emergency_code, name: responder.name, on_duty: responder.on_duty, responder_type: responder.responder_type }
     assert_redirected_to responder_path(assigns(:responder))
   end
 
