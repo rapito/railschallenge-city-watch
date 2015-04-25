@@ -62,13 +62,13 @@ class RespondersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_responder
-      @responder = Responder.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_responder
+    @responder = Responder.find(params[:name])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def responder_params
-      params.require(:responder).permit(:emergency_code, :responder_type, :name, :capacity, :on_duty)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def responder_params
+    params.require(:responder).permit(:emergency_code, :responder_type, :name, :capacity, :on_duty)
+  end
 end
