@@ -21,7 +21,6 @@ class RespondersController < ApplicationController
 
   # POST /responders
   def create
-    puts responder_params
     @responder = Responder.new(responder_params)
 
     respond_to do |format|
@@ -57,6 +56,7 @@ class RespondersController < ApplicationController
   def set_responder
     begin
       @responder = Responder.find(params[:name])
+      @responder.on_duty = @responder.on_duty ? true : false
     rescue
       page_not_found
     end
