@@ -8,7 +8,7 @@ module EmergenciesHelper
         police_severity: emergency.police_severity,
         medical_severity: emergency.medical_severity
     }
-    
+
     json.emergency em
 
   end
