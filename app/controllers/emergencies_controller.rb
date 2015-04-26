@@ -4,6 +4,7 @@ class EmergenciesController < ApplicationController
   # GET /emergencies
   def index
     @emergencies = Emergency.all
+
   end
 
   # GET /emergencies/1
