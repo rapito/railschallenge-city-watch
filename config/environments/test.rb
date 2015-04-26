@@ -4,6 +4,9 @@ Rails.application.configure do
   config.serve_static_files   = true
   config.static_cache_control = 'public, max-age=3600'
 
+  # raise error when inpermitted parameters are met
+  config.action_controller.action_on_unpermitted_parameters = :raise
+
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 

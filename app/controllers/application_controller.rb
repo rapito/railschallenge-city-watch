@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
     render json: {:message => exception.message}.to_json, status: :unprocessable_entity
   end
 
+  # rescue_from ActionController::ActionControllerError { |err| render json: {:message => err.message} }
+
 
   # Renders 404.html.json for any resource not foudn
   def page_not_found
