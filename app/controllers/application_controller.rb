@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
+  rescue_from ActionController::UnpermittedParameters do |exception|
+    render json: {:message => exception.message}.to_json, status: :unprocessable_entity
+  end
+
 
   # Renders 404.html.json for any resource not foudn
   def page_not_found

@@ -1,6 +1,6 @@
 class CreateResponders < ActiveRecord::Migration
   def change
-    create_table :responders, :primary_key => :name, id: false do |t|
+    create_table :responders do |t|
       t.string :emergency_code
       t.string :responder_type
       t.string :name
