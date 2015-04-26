@@ -64,6 +64,6 @@ class RespondersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def responder_params
-    params.require(:responder).permit(:emergency_code, :type, :name, :capacity, :on_duty)
+    params.require(:responder).permit(:type, :name, :capacity)
   end
 end

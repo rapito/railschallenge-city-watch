@@ -3,4 +3,7 @@ class Responder < ActiveRecord::Base
 
   alias_attribute :type, :responder_type
 
+  validates :name, :presence => true, :uniqueness => true
+  validates :type, :presence => true
+  validates :capacity, :presence => true, :inclusion => {in: 1..5}
 end
