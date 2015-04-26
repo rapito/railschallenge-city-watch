@@ -46,7 +46,7 @@ class EmergenciesCreateTest < ActionDispatch::IntegrationTest
   end
 
   test 'POST /emergencies/ cannot set id' do
-    post '/emergencies', emergency: { id: 1, code:'E-not-unique', fire_severity: 1, police_severity: 2, medical_severity: 3 }
+    post '/emergencies', emergency: { id: 1, fire_severity: 1, police_severity: 2, medical_severity: 3 }
 
     assert_equal 422, response.status
     assert_equal({ 'message' => 'found unpermitted parameter: id' }, JSON.parse(body))
