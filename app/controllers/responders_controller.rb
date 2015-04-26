@@ -3,7 +3,13 @@ class RespondersController < ApplicationController
 
   # GET /responders
   def index
-    @responders = Responder.all
+    logger.info params
+    if params[:show] == 'capacity'
+      capacity
+    else
+      @responders = Responder.all
+
+    end
   end
 
   # GET /responders/1
@@ -69,5 +75,18 @@ class RespondersController < ApplicationController
 
   def responder_patch_params
     params.require(:responder).permit(:on_duty)
+  end
+
+  # Need to be able to see the capacity of the emergency responders in the city
+  def capacity
+    @capacity = {
+        'Fire' => Responder.find_by_capacity_status(:fire),
+        'Police' => Responder.find_by_capacity_status(:police),
+        'Medical' => Responder.find_by_capacity_status(:medical)
+    }
+    logger.info @capacity
+
+
+    render :capacity
   end
 end
