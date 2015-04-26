@@ -21,6 +21,7 @@ class RespondersController < ApplicationController
 
   # POST /responders
   def create
+    puts responder_params
     @responder = Responder.new(responder_params)
 
     respond_to do |format|
@@ -63,6 +64,6 @@ class RespondersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def responder_params
-    params.require(:responder).permit(:emergency_code, :responder_type, :name, :capacity, :on_duty)
+    params.require(:responder).permit(:emergency_code, :type, :name, :capacity, :on_duty)
   end
 end

@@ -9,8 +9,6 @@ class CreateResponders < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :responders, :emergency_code
-    add_index :responders, :responder_type
     add_index :responders, :name
   end
 end
