@@ -13,8 +13,9 @@ class EmergenciesController < ApplicationController
 
   # POST /emergencies
   def create
-    @emergency = Emergency.new(emergency_params)
+    @emergency = Emergency.new emergency_params
     @responders = Responder.dispatch @emergency if @emergency.valid?
+    @cap_met = Responder.meets_capacity @emergency if @emergency.valid?
 
     respond_to do |format|
       if @emergency.save

@@ -1,1 +1,1 @@
-jsonbuild_emergency @emergency, @responders, json
+jsonbuild_emergency @emergency, @responders, @cap_met, json

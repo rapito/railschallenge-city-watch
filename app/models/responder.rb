@@ -40,15 +40,32 @@ class Responder < ActiveRecord::Base
     sum
   end
 
+  # wether or not this emergency is
+  # covered by responders
+  def self.meets_capacity(emergency)
+    fire_responders = dispatch_if_cap_not_met emergency, :fire
+    police_responders = dispatch_if_cap_not_met emergency, :police
+    medical_responders = dispatch_if_cap_not_met emergency, :medical
+
+    meets_capacity = (fire_responders.empty? and police_responders.empty? and medical_responders.empty?)
+    meets_capacity
+  end
+
   # finds Responders suited to work on the passed
   # emergency
   def self.dispatch(emergency)
 
     responders = []
+
+    # get responders for overwhelming severity
+    fire_responders = dispatch_if_cap_not_met emergency, :fire
+    police_responders = dispatch_if_cap_not_met emergency, :police
+    medical_responders = dispatch_if_cap_not_met emergency, :medical
+
     # get exact responder type for capacity
-    fire_responders = available_and_on_duty.fire_type.where(capacity: emergency.fire_severity).select(:name).map(&:name)
-    police_responders = available_and_on_duty.police_type.where(capacity: emergency.police_severity).select(:name).map(&:name)
-    medical_responders = available_and_on_duty.medical_type.where(capacity: emergency.medical_severity).select(:name).map(&:name)
+    fire_responders = available_and_on_duty.fire_type.where(capacity: emergency.fire_severity).select(:name).map(&:name) if fire_responders.empty?
+    police_responders = available_and_on_duty.police_type.where(capacity: emergency.police_severity).select(:name).map(&:name) if police_responders.empty?
+    medical_responders = available_and_on_duty.medical_type.where(capacity: emergency.medical_severity).select(:name).map(&:name) if medical_responders.empty?
 
     dispatch_by_capabilities(emergency, fire_responders, :fire) if fire_responders.empty?
     dispatch_by_capabilities(emergency, police_responders, :police) if police_responders.empty?
@@ -57,7 +74,23 @@ class Responder < ActiveRecord::Base
     responders.concat fire_responders
     responders.concat police_responders
     responders.concat medical_responders
+
+    # make all responders actually work on the emergency
+    # where(name: responders).update_all(emergency_code: emergency.code)
+
     responders
+  end
+
+  # gets all responders for the type passes if the capacity
+  # for the emergency severity is not met
+  def self.dispatch_if_cap_not_met(emergency, type)
+    responders = available_and_on_duty.by_type(type)
+    capacity = sum_capacities responders
+
+    responders = available_and_on_duty.by_type(type).select(:name).map(&:name)
+    # if the capacity of all responders of the passed type is lower
+    # than the severity of the emergency send all responders else send an empty array
+    return capacity < emergency["#{type}_severity"] ? responders : []
   end
 
   # pushes available responders of the specified type to the responders_arr
@@ -71,4 +104,5 @@ class Responder < ActiveRecord::Base
       end
     end
   end
+
 end
