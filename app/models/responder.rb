@@ -29,9 +29,23 @@ class Responder < ActiveRecord::Base
 
   def self.sum_capacities(responders)
     sum = 0
-
     responders.each { |r| sum+= r.capacity }
-
     sum
   end
+
+  # finds Responders suited to work on the passed
+  # emergency
+  def self.dispatch emergency
+
+    # fire_cap = emergency.fire_severity
+    # police_cap = emergency.police_severity
+    # medical_cap = emergency.medical_severity
+    #
+    #
+    # fire_responders = self.where('capacity' >= fire_cap)
+    # police_responders =
+    # medical_responders =
+
+  end
+
 end
