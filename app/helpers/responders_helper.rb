@@ -1,7 +1,7 @@
 module RespondersHelper
-
   def jsonbuild_responder(responder, json, wrap)
     resp = {
+
         emergency_code: responder.emergency_code,
         type: responder.type,
         name: responder.name,
@@ -16,4 +16,3 @@ module RespondersHelper
     end
   end
 end
-

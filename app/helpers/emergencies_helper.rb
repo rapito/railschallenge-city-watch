@@ -1,7 +1,7 @@
 module EmergenciesHelper
-
-  def jsonbuild_emergency(emergency, responders, cap_met, json)
+  def jsonbuild_emergency(emergency, responders, _cap_met, json)
     em = {
+
         code: emergency.code,
         fire_severity: emergency.fire_severity,
         police_severity: emergency.police_severity,

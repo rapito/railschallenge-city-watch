@@ -58,14 +58,13 @@ class RespondersController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_responder
-    begin
-      @responder = Responder.find(params[:name])
-      @responder.on_duty = @responder.on_duty ? true : false
-    rescue
-      page_not_found
-    end
+    @responder = Responder.find(params[:name])
+    @responder.on_duty = @responder.on_duty ? true : false
+  rescue
+    page_not_found
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
@@ -80,6 +79,7 @@ class RespondersController < ApplicationController
   # Need to be able to see the capacity of the emergency responders in the city
   def capacity
     @capacity = {
+
         'Fire' => Responder.find_by_capacity_status(:fire),
         'Police' => Responder.find_by_capacity_status(:police),
         'Medical' => Responder.find_by_capacity_status(:medical)

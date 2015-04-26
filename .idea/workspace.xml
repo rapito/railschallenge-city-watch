@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3202b732-d509-4855-8579-3f30da928a33" name="Default" comment="+ scaffolded models&#10;+ fixed missing applications_controller&#10;+ added db indexes">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/emergencies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/emergencies_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/emergencies_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/emergencies_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/emergency.rb" afterPath="$PROJECT_DIR$/app/models/emergency.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/railschallenge-city-watch.iml" afterPath="$PROJECT_DIR$/.idea/railschallenge-city-watch.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/responder.rb" afterPath="$PROJECT_DIR$/app/models/responder.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/responders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/responders_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/responders_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/responders_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="railschallenge-city-watch.iws" />
@@ -30,7 +32,7 @@
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@db_migrate__railschallenge_city_watch.coverage" NAME="db:migrate: railschallenge-city-watch Coverage Results" MODIFIED="1429998265811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@test_POST__emergencies__cannot_set_id__railschallenge_city_watch.coverage" NAME="test_POST_/emergencies/_cannot_set_id: railschallenge-city-watch Coverage Results" MODIFIED="1430009929922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__emergencies_index_test___railschallenge_city_watch.coverage" NAME="Run test 'emergencies_index_test': railschallenge-city-watch Coverage Results" MODIFIED="1430028837790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
-    <SUITE FILE_PATH="coverage/railschallenge-city-watch@test_POST__emergencies__will_dispatch_all_resources_for_an_emergency_that_exceeds_on_duty_resources__railschallenge_city_watch.coverage" NAME="test_POST_/emergencies/_will_dispatch_all_resources_for_an_emergency_that_exceeds_on-duty_resources: railschallenge-city-watch Coverage Results" MODIFIED="1430088852047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
+    <SUITE FILE_PATH="coverage/railschallenge-city-watch@test_POST__emergencies__will_dispatch_all_resources_for_an_emergency_that_exceeds_on_duty_resources__railschallenge_city_watch.coverage" NAME="test_POST_/emergencies/_will_dispatch_all_resources_for_an_emergency_that_exceeds_on-duty_resources: railschallenge-city-watch Coverage Results" MODIFIED="1430089036610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__responders_index_test___railschallenge_city_watch.coverage" NAME="Run test 'responders_index_test': railschallenge-city-watch Coverage Results" MODIFIED="1430028509908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@test_POST__emergencies__simple_creation__railschallenge_city_watch.coverage" NAME="test_POST_/emergencies/_simple_creation: railschallenge-city-watch Coverage Results" MODIFIED="1429982701365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__responders_show_test___railschallenge_city_watch.coverage" NAME="Run test 'responders_show_test': railschallenge-city-watch Coverage Results" MODIFIED="1430028511651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
@@ -43,7 +45,7 @@
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__responders_404_test___railschallenge_city_watch.coverage" NAME="Run test 'responders_404_test': railschallenge-city-watch Coverage Results" MODIFIED="1430028515617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__emergencies_404_test___railschallenge_city_watch.coverage" NAME="Run test 'emergencies_404_test': railschallenge-city-watch Coverage Results" MODIFIED="1430028834337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Development__railschallenge_city_watch.coverage" NAME="Development: railschallenge-city-watch Coverage Results" MODIFIED="1430066534596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
-    <SUITE FILE_PATH="coverage/railschallenge-city-watch@All_tests_in_api__railschallenge_city_watch.coverage" NAME="All tests in api: railschallenge-city-watch Coverage Results" MODIFIED="1430088208745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
+    <SUITE FILE_PATH="coverage/railschallenge-city-watch@All_tests_in_api__railschallenge_city_watch.coverage" NAME="All tests in api: railschallenge-city-watch Coverage Results" MODIFIED="1430090308911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__emergencies_create_test___railschallenge_city_watch.coverage" NAME="Run test 'emergencies_create_test': railschallenge-city-watch Coverage Results" MODIFIED="1430080032451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
     <SUITE FILE_PATH="coverage/railschallenge-city-watch@Run_test__responders_capacity_test___railschallenge_city_watch.coverage" NAME="Run test 'responders_capacity_test': railschallenge-city-watch Coverage Results" MODIFIED="1430022686773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="railschallenge-city-watch" />
   </component>
@@ -108,11 +110,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="responder.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/responder.rb">
+      <file leaf-file-name="responders_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/responders_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responder.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/responder.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2060606">
+              <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responders_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/responders_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/test/api/emergencies_dispatch_test.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#89#165#0" expanded="false" />
                 <element signature="e#169#774#0" expanded="false" />
@@ -132,25 +154,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="emergencies_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/emergencies_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
               <folding>
-                <element signature="e#1251#1365#0" expanded="false" />
-                <element signature="e#1301#1359#0" expanded="false" />
-                <element signature="e#1331#1351#0" expanded="false" />
+                <element signature="e#1252#1366#0" expanded="false" />
+                <element signature="e#1302#1360#0" expanded="false" />
+                <element signature="e#1332#1352#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emergencies_helper.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="emergencies_helper.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/helpers/emergencies_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78032786">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emergency.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/emergency.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -188,16 +230,16 @@
         <option value="$PROJECT_DIR$/app/views/responders/capacity.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/responders/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/responders_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/responders_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/responders/show.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/emergencies/show.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/controllers/emergencies_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/emergency.rb" />
         <option value="$PROJECT_DIR$/test/api/emergencies_dispatch_test.rb" />
-        <option value="$PROJECT_DIR$/app/models/responder.rb" />
+        <option value="$PROJECT_DIR$/app/models/emergency.rb" />
         <option value="$PROJECT_DIR$/app/helpers/emergencies_helper.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/responders_helper.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/responders_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/emergencies_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/responder.rb" />
       </list>
     </option>
   </component>
@@ -569,7 +611,7 @@
       <recent name="D:\Dev\Projects\Ruby\railschallenge-city-watch\app\views\shared" />
     </key>
   </component>
-  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_POST_/emergencies/_will_dispatch_all_resources_for_an_emergency_that_exceeds_on-duty_resources: railschallenge-city-watch">
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.All tests in api: railschallenge-city-watch">
     <configuration default="false" name="Run test 'emergencies_create_test': railschallenge-city-watch" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="railschallenge-city-watch" />
@@ -873,8 +915,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_POST_/emergencies/_will_dispatch_all_resources_for_an_emergency_that_exceeds_on-duty_resources: railschallenge-city-watch" />
-        <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in api: railschallenge-city-watch" />
+        <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in api: railschallenge-city-watch" />
+        <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.test_POST_/emergencies/_will_dispatch_all_resources_for_an_emergency_that_exceeds_on-duty_resources: railschallenge-city-watch" />
         <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.Run test 'emergencies_create_test': railschallenge-city-watch" />
         <item index="3" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.Run test 'emergencies_dispatch_test': railschallenge-city-watch" />
         <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda/Minitest.All tests in test: railschallenge-city-watch" />
@@ -924,17 +966,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25597268" sideWeight="0.48940998" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25490198" sideWeight="0.48940998" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15733737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26626325" sideWeight="0.48876405" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26626325" sideWeight="0.48876405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4064171" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3890785" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2624811" sideWeight="0.51123595" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.51059" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1262,14 +1304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Platforms/Ruby/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/minitest-5.5.1/lib/minitest/assertions.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1296,14 +1330,6 @@
             <element signature="e#3135#3397#0" expanded="false" />
             <element signature="e#3469#3731#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/responders_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,34 +1365,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/emergencies_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/responders_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/emergency.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60600376">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/responder.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/responders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/emergencies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="e#1252#1366#0" expanded="false" />
+            <element signature="e#1302#1360#0" expanded="false" />
+            <element signature="e#1332#1352#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/api/emergencies_dispatch_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="e#89#165#0" expanded="false" />
             <element signature="e#169#774#0" expanded="false" />
@@ -1375,22 +1421,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/emergencies_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/emergency.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="e#1251#1365#0" expanded="false" />
-            <element signature="e#1301#1359#0" expanded="false" />
-            <element signature="e#1331#1351#0" expanded="false" />
-          </folding>
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/emergencies_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/responder.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78032786">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2060606">
+          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
           <folding />
         </state>
       </provider>

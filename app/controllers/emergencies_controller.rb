@@ -30,7 +30,7 @@ class EmergenciesController < ApplicationController
   def update
     respond_to do |format|
       if @emergency.update(emergency_patch_params)
-        @emergency.free_responders if params[:emergency][:resolved_at] != nil
+        @emergency.free_responders if params[:emergency][:resolved_at] != nil?
         format.json { render :show, status: :ok, location: @emergency }
       else
         format.json { render json: wrap_msg_response(@emergency.errors), status: :unprocessable_entity }
@@ -51,7 +51,9 @@ class EmergenciesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_emergency
-    @emergency = Emergency.find(params[:code]) rescue page_not_found
+    @emergency = Emergency.find(params[:code])
+  rescue
+    page_not_found
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
@@ -62,5 +64,4 @@ class EmergenciesController < ApplicationController
   def emergency_patch_params
     params.require(:emergency).permit(:fire_severity, :police_severity, :medical_severity, :resolved_at)
   end
-
 end
