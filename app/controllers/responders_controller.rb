@@ -35,7 +35,7 @@ class RespondersController < ApplicationController
   # PATCH/PUT /responders/1
   def update
     respond_to do |format|
-      if @responder.update(responder_params)
+      if @responder.update(responder_patch_params)
         format.json { render :show, status: :ok, location: @responder }
       else
         format.json { render json: wrap_msg_response(@responder.errors), status: :unprocessable_entity }
@@ -65,5 +65,9 @@ class RespondersController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def responder_params
     params.require(:responder).permit(:type, :name, :capacity)
+  end
+
+  def responder_patch_params
+    params.require(:responder).permit(:on_duty)
   end
 end

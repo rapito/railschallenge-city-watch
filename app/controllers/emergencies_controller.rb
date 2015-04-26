@@ -27,7 +27,7 @@ class EmergenciesController < ApplicationController
   # PATCH/PUT /emergencies/1
   def update
     respond_to do |format|
-      if @emergency.update(emergency_params)
+      if @emergency.update(emergency_patch_params)
         format.json { render :show, status: :ok, location: @emergency }
       else
         format.json { render json: wrap_msg_response(@emergency.errors), status: :unprocessable_entity }
@@ -57,5 +57,9 @@ class EmergenciesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def emergency_params
     params.require(:emergency).permit(:code, :fire_severity, :police_severity, :medical_severity)
+  end
+
+  def emergency_patch_params
+    params.require(:emergency).permit(:fire_severity, :police_severity, :medical_severity, :resolved_at)
   end
 end
