@@ -1,1 +1,1 @@
-jsonbuild_responder @responder, json
+jsonbuild_responder @responder, json, true
