@@ -86,7 +86,6 @@ class RespondersController < ApplicationController
     }
     logger.info @capacity
 
-
     render :capacity
   end
 end

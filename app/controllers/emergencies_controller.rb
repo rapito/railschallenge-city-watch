@@ -14,8 +14,7 @@ class EmergenciesController < ApplicationController
   # POST /emergencies
   def create
     @emergency = Emergency.new(emergency_params)
-    #  TODO: add responders dispatch
-    # @emergency.responders = Responder.dispatch @emergency
+    @responders = Responder.dispatch @emergency if @emergency.valid?
 
     respond_to do |format|
       if @emergency.save
@@ -47,13 +46,10 @@ class EmergenciesController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_emergency
-    begin
-      @emergency = Emergency.find(params[:code])
-    rescue
-      page_not_found
-    end
+    @emergency = Emergency.find(params[:code]) rescue page_not_found
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
@@ -64,4 +60,5 @@ class EmergenciesController < ApplicationController
   def emergency_patch_params
     params.require(:emergency).permit(:fire_severity, :police_severity, :medical_severity, :resolved_at)
   end
+
 end

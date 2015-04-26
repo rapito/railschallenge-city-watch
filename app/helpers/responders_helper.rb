@@ -1,7 +1,6 @@
 module RespondersHelper
 
   def jsonbuild_responder(responder, json, wrap)
-
     resp = {
         emergency_code: responder.emergency_code,
         type: responder.type,
@@ -13,10 +12,8 @@ module RespondersHelper
     if wrap
       json.responder resp
     else
-      json.(resp, :emergency_code, :type, :name, :capacity, :on_duty)
+      json.call(resp, :emergency_code, :type, :name, :capacity, :on_duty)
     end
-
   end
-
 end
 
