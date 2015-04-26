@@ -30,6 +30,7 @@ class EmergenciesController < ApplicationController
   def update
     respond_to do |format|
       if @emergency.update(emergency_patch_params)
+        @emergency.free_responders if params[:emergency][:resolved_at] != nil
         format.json { render :show, status: :ok, location: @emergency }
       else
         format.json { render json: wrap_msg_response(@emergency.errors), status: :unprocessable_entity }

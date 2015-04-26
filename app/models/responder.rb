@@ -76,7 +76,7 @@ class Responder < ActiveRecord::Base
     responders.concat medical_responders
 
     # make all responders actually work on the emergency
-    # where(name: responders).update_all(emergency_code: emergency.code)
+    where(name: responders).update_all(emergency_code: emergency.code)
 
     responders
   end

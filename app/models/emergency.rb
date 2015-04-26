@@ -14,4 +14,9 @@ class Emergency < ActiveRecord::Base
 
     [full, Emergency.count]
   end
+
+  # unassigns all responders attending to this emergency
+  def free_responders
+    Responder.where(emergency_code: self.code).update_all(emergency_code: nil)
+  end
 end

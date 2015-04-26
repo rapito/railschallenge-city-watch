@@ -10,9 +10,9 @@ module EmergenciesHelper
         responders: responders
     }
 
-    if cap_met
-      em[:full_response] = "#{responders.count} responders has been dispatched" if responders
-    end
+    em[:full_response] = "#{responders.count} responders has been dispatched" if responders
+    # em.delete :full_response unless cap_met
+
     json.emergency em
   end
 end
